@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" styleClass="anchorPane" stylesheets="@ClientStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Client.UIController.ClientController">
+   <children>
+      <Text fx:id="Logo" layoutX="63.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Logo" text="MyMessage" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Dubai Bold" size="18.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="RegistrPane" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <VBox fx:id="RegistrBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fx:id="RegistrText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Введите ваш Никнейм">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="RegistrTextField" styleClass="TextField" text="dsfdsdf">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fx:id="RegistrErrorText" fill="#f40000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="ErrorText" text="ErrorText" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="RegistrButton" mnemonicParsing="false" styleClass="Button" text="Войти">
+                     <VBox.margin>
+                        <Insets bottom="100.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="SearchPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <VBox fx:id="SearchBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fx:id="SearchText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Введите Никнейм пользователя">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="SearchTextField" styleClass="TextField">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fx:id="SearchErrorText" fill="#f40000" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="ErrorText" text="ErrorText" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="SearchButton" mnemonicParsing="false" styleClass="Button" text="Войти">
+                     <VBox.margin>
+                        <Insets bottom="100.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ChatPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <ScrollPane fx:id="ChatScrollPane" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" styleClass="ScrollPane" vbarPolicy="NEVER" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <content>
+                  <VBox fx:id="ChatVBox" alignment="BOTTOM_LEFT" prefHeight="588.0" prefWidth="476.0" styleClass="VBox" />
+               </content>
+            </ScrollPane>
+            <TextField fx:id="ChatTextField" layoutX="14.0" layoutY="597.0" prefHeight="54.0" prefWidth="348.0" styleClass="TextField" />
+            <Button fx:id="ChatButton" layoutX="372.0" layoutY="597.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="113.0" styleClass="Button" text="Отправить" />
+         </children>
+      </AnchorPane>
+      <Text fx:id="ConnectionError" layoutX="129.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="ErrorText" text="Text" wrappingWidth="356.43182373046875" />
+   </children>
+</AnchorPane>
